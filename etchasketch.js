@@ -10,6 +10,7 @@ function createGrid (gridSize) {
             const column = document.createElement("div");
             column.classList.add("column");
             row.appendChild(column);
+            column.addEventListener("mouseover", () => {column.style.backgroundColor = "black"});
         }
     }
 }
