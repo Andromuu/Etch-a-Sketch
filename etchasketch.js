@@ -28,7 +28,10 @@ function customGrid() {
     while (container.firstChild){
         container.removeChild(container.firstChild);
     }
-    let size = prompt("Enter a number beetween 1 and 100");
+    let size = parseInt(prompt("Enter a number beetween 1 and 100"));
+    while (Number.isInteger(size) != true || size < 2 || size > 100){
+        size = parseInt(prompt("Enter a number beetween 1 and 100"));
+    } 
     return createGrid(size);
 }
 
